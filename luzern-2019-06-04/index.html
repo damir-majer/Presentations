@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Git enabling in SAP</title>
+
+		<meta name="description" content="SAP Stammtisch Luzern">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="3db75c9c9c3d65326e0a19b7daeab436"><div class="sl-block" data-block-type="text" style="width: 938px; left: 14px; top: 238px; height: auto;" data-block-id="a1b768b288de3501f4dcf2d44b273d13"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><span style="font-size:1.0em">SAP Stammtisch Luzern</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 68px; top: 420px; height: auto;" data-block-id="e630c7736fc2b7f7a55613e35b6c5622"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>@majcon</h2>
+</div></div></section><section data-id="55c06700f55ffd09eeacba992e1b26d0"><div class="sl-block" data-block-type="text" style="width: 930px; left: 13px; top: 159px; height: auto;" data-block-id="5ff4c472593e0491009dd667aa58184a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1><span style="font-size:0.7em"><span style="color:rgb(51, 51, 51); text-align:start">Continuous integration in an ABAP environment with git-enabled CTS</span></span></h1>
+</div></div></section><section data-id="8f8b2c583914d3b669b9b3cb302ee243"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 393px; left: 0px; top: 210px;" data-block-id="b9f7ad5a080d6712938b906995a9cb09"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="862" data-natural-height="353" data-lazy-loaded="" data-src="deck-2-12/c84c059e9ad008d210046ae1a33299fa.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="48215e3f6e1324649dc3070ec24e57e2" style="height: auto; min-width: 30px; min-height: 30px; width: 935px; left: 0px; top: 16px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>history of version control</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1ff667fc49ac37e580cfa7ba557a6f17" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 642px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="http://www.netinstructions.com/the-case-for-git/" target="_blank">http://www.netinstructions.com/the-case-for-git/</a></p>
+</div></div></section><section class="stack" data-id="b2487d83c7b7843aef4607669fda254d"><section data-id="4b6fed43a1efcafe67b25e7e0416fe11"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 22px;" data-block-id="0c78ce0bb6dacadec830bd1667f9f091"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>3 types of version control</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 372px; left: 0px; top: 140px;" data-block-id="03aa6bb86e60bac8f89079bc7f3fc0ea"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="848" data-natural-height="329" data-lazy-loaded="" data-src="deck-2-12/c85c3e52aeb664d0c2157fa260a8ad89.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e2c80721069ff9b945bd816c14fa9054" style="height: auto; min-width: 30px; min-height: 30px; width: 850px; left: 80px; top: 649px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><a href="https://financesonline.com/version-control-systems/" target="_blank">https://financesonline.com/version-control-systems/</a></p>
+</div></div></section><section data-id="986a71339e73b9509855e75636584890"><div class="sl-block" data-block-type="image" data-block-id="fece04573b682b62275baf0c62b8fb8d" style="min-width: 4px; min-height: 4px; width: 933px; height: 630px; left: 14px; top: 35px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="646" data-natural-height="436" style="" data-lazy-loaded="" data-src="deck-2-12/49f65b3c7dfe4d8b959a7ae00a2bc258.png"></div></div></section><section data-id="31d73661b0aa2b31ca4c9f4a4f3e9856"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 831px; height: 461px; left: 65px; top: 89px;" data-block-id="8fbe3d1d529a7b94ed0cc19794dacdc5"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="631" data-natural-height="350" style="" data-lazy-loaded="" data-src="deck-2-12/a8b95ad8246fa7b888f48aa288edd38a.png"></div></div></section></section><section data-id="47841146893764aa4aad62f477cc0df1"><div class="sl-block" data-block-type="text" data-block-id="4153138af9c85e3db11d25dac7994997" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>historie of git</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 716px; height: 498px; left: 122px; top: 111px;" data-block-id="fb3e8946cf7c7e0917fa9989106c368a"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="630" data-natural-height="438" style="" data-lazy-loaded="" data-src="deck-2-12/862db39dd9cd9ebc25aaa0eaf819c495.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9c874f45083eefe2dd32bc5ce024de0f" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 622px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="https://www.slideshare.net/h_neumann/what-the-git-sap-inside-track-munich-2016" target="_blank">https://www.slideshare.net/h_neumann/what-the-git-sap-inside-track-munich-2016</a></p>
+</div></div></section><section class="stack" data-id="f12c3f4f173aeafa53d56c9ef875e71b"><section data-id="7e23cd814cec76f2adb4f22f61abbf59"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 51px;" data-block-id="dd2a9d11551720b9955d1f950de3d9df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>working with git</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 830px; height: 391px; left: 80px; top: 175px;" data-block-id="cca0561ae489a38a1232dfa731d83aa0"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="654" data-natural-height="308" data-lazy-loaded="" data-src="deck-2-12/a349fb0a02ae840a8a37d396fc5edaaf.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="011453732910e299448193d7384feddc" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 642px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="https://thebittheories.com/the-git-github-conundrum-664555988cf6" target="_blank">https://thebittheories.com/the-git-github-conundrum-664555988cf6</a></p>
+</div></div></section><section data-id="15fb53c1e18ba4e202c4cdf1fa9fd379"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 428px; left: 0px; top: 70px;" data-block-id="269151f27c7c782ccf7e7a23a39ac400"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1119" data-natural-height="499" data-lazy-loaded="" data-src="deck-2-12/567591d4d2aa2fb622a12e8ed366fcb8.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="00010349e8cd76b0427de4f22cf8d396" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 623px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://hackernoon.com/top-5-free-courses-to-learn-git-and-github-best-of-lot-2f394c6533b0" target="_blank">https://hackernoon.com/top-5-free-courses-to-learn-git-and-github-best-of-lot-2f394c6533b0</a></p>
+</div></div></section><section data-id="6886bf604b14d90e5b06a181177958a2"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 395px; height: 527px; left: 274px; top: 134px;" data-block-id="22fdb175ad8ded615519379d682259b6"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="440" data-natural-height="587" data-lazy-loaded="" data-src="deck-2-12/11c23a9f9dbf32235f517c4c41bfc442.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="258f33c4a6e6f5163410da92cf9d51f6" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 661px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">https://nvie.com/posts/a-successful-git-branching-model/</a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="204a0bdc7d29590d8786bb153b865b19" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;"><p>Text</p></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cc78addfa136521b407133a1e35c28a5" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 171px; top: 17px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h1>git flow</h1>
+</div></div></section><section data-id="d5e8c3bdb8e3b91937d985b82a551561"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 966px; left: -3px; top: 0px;" data-block-id="032b6f804be5b5ec635f635854677021"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h1>gui/console/IDE</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 588px; height: 335px; left: 43px; top: 123px;" data-block-id="60ad5bb6446573c9830dc61229583d41"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="588" data-natural-height="335" style="" data-lazy-loaded="" data-src="deck-2-12/03aa93482b1479b43bc82d42de166ff2.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 636px; height: 264px; left: 344px; top: 210px;" data-block-id="54cfd8c7c5337ad89faadd728002d9f5"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="730" data-natural-height="303" style="" data-lazy-loaded="" data-src="deck-2-12/b7cc5174d0e6cdf69b317dadf35f1b83.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 528px; height: 296px; left: 20px; top: 372px;" data-block-id="c1628cb19f311997b0eb73c382833089"><div class="sl-block-content" style="z-index: 16;"><img data-natural-width="851" data-natural-height="477" style="" data-lazy-loaded="" data-src="deck-2-12/8372b8776f3809954c2132739fa73956.png"></div></div></section></section><section data-id="3fd329f971ec1a094601a3ddf3397486"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 238px; height: auto;" data-block-id="99151e0adc76aa4470b4c824349bccc2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Intro abapGit</h1>
+</div></div></section><section data-id="8471428c23ac05b95f40c500075188b7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="700a1ca2c45fac37342a9b3e35af77f6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>ABAP + git = abapGit</h1>
+</div></div></section><section data-id="397616ecb85383562ef9719d831f9ab6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 152px; height: auto;" data-block-id="0a2f1dbe4d78f685f48ca1e07b1f2c0c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Open Source</h1>
+
+<h1>(MIT license)</h1>
+
+<p>abapGit.org</p>
+</div></div></section><section data-id="57239e526be73887d2939555c1fcd20e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 178px; height: auto;" data-block-id="7ef5e3cadbd40dec92e10cbe451fd25f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Founder</h1>
+
+<h1>Lars Hvam Peterson</h1>
+
+<p> </p>
+
+<p>started 2014</p>
+</div></div></section><section data-id="bbf9fedbdef5f1e36b1804605be42348"><div class="sl-block" data-block-type="text" style="width: 806px; left: 95px; top: 22px; height: auto;" data-block-id="4d3a359a26378b75cb912184c48a0058"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>hosted @GitHub</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 646px; height: 506px; left: 175px; top: 140px; min-width: 4px; min-height: 4px;" data-block-id="94150fff1d824ff232e0db2336402181"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1045" data-natural-height="818" data-lazy-loaded="" data-src="deck-2-12/7bc5be92cd4513121f1d1bcba12c3824.png"></div></div></section><section data-id="6af20cc3a6cdbc266e5fce33666e92aa"><div class="sl-block" data-block-type="text" style="width: 806px; left: 103px; top: 135px; height: auto;" data-block-id="26cfb6092a569bc3aa958d9114caddde"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>&gt; 80 supported object types (CLAS, PROG, TABL, ...)</h1>
+</div></div></section><section data-id="cfd99e3f178e086f40015a414708f8ed"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 183px; height: auto;" data-block-id="fb1624a284f29f3834cf12ce55109716"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>~ 72 000 LoC</h1>
+</div></div></section><section data-id="c9700716ae53445c3c4755f5a5b2c1d7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 66px; height: auto;" data-block-id="473f9effcbfd4d51213fb32c3c6ab52f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Why abapGit? - Limitations in ABAP version control</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 91px; top: 316px; height: auto;" data-block-id="fbcb02d88fe44dc37f429690cb8d99e7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Versions are written by transport release</li>
+	<li>Temporary versions are deleted</li>
+	<li>Limited control for developers</li>
+	<li>No easy tracking and undoing of changes</li>
+	<li>No distributed development</li>
+</ul>
+</div></div></section><section data-id="ea97032940b1f618a0596b31416a45e1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 194px; height: auto;" data-block-id="00a8eb29443d59a78e92522254b54543"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>More Safety and transparency</h1>
+</div></div></section><section data-id="89742c995da26d428943a05d498548d6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 87px; top: 246px; height: auto;" data-block-id="8387b01f43a6bd2f38abf6ba91a429a5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Enabler for DevOps</h1>
+</div></div></section><section data-id="3867591bff295688722b4ac223080e88"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 210px; height: auto;" data-block-id="21eb5dff20c8ca6c380a7887400dc46e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Enabler for code reviews</h1>
+</div></div></section><section data-id="cdba6f13caab8af4bcd414a0f2ee12b0"><div class="sl-block" data-block-type="text" style="width: 806px; left: 89px; top: 0px; height: auto;" data-block-id="533ad01c5f588af6301f87b1d78587b7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Enabler for open source - dotabap.org</h1>
+
+<p> </p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 753px; height: 479px; left: 127px; top: 204px; min-width: 4px; min-height: 4px;" data-block-id="bcfdd6440bd253131fee7a2e8f1e6607"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1465" data-natural-height="932" data-lazy-loaded="" data-src="deck-2-12/17f7b1e4869c8e5c74da80bc6af3eaa2.png"></div></div></section><section data-id="fc4aca3c5da40e397f2d2f780cc4b0ff"><div class="sl-block" data-block-type="text" style="width: 806px; left: 88px; top: 133px; height: auto;" data-block-id="2d8082cda8d0b63e905b46f0a4a2df65"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>BUT: No substitute for SAP transport and release management</h1>
+</div></div></section><section data-id="57c51ca020f39350fd5589deed02e1ed"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 60px; height: auto;" data-block-id="40598321d4c3779227b7b56026672f84"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Works with</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 89px; top: 210px; height: auto;" data-block-id="a3dce49487bcc0c5a7ba7d4667fff821"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>GitHub</li>
+	<li>Gitlab</li>
+	<li>Bitbucket</li>
+	<li>SCP</li>
+	<li>TFS</li>
+	<li>abapGit server</li>
+	<li>...</li>
+</ul>
+</div></div></section><section data-id="7739f9d46acb61c99555d13aee60c6e9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 151px; height: auto;" data-block-id="a5fc5831bfd65e5e61d91630076dca91"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; font-size: 66%;">
+<h1>package</h1>
+
+<h1>+</h1>
+
+<h1>sub packages</h1>
+
+<h1>=</h1>
+
+<h1>git repository</h1>
+</div></div></section><section data-id="9a6ca3207d7e6c1efea03e75b3d96c4e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 231px; height: auto;" data-block-id="eb55576ac2e1e4662192029b2202504a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>SAP uses abapGit</h2>
+</div></div></section><section data-id="4f1e874b03da0dca45a78d4c9ceaa7ed"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 6px; top: 22px;" data-block-id="3a8db745875751e43503731701d741be"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h1>abapgit and beyond</h1>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 412px; left: 296px; top: 195px;" data-block-id="eab93182a953975635bb9dc275683a16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>CI / CD
+	<ul>
+		<li>testautomation</li>
+	</ul>
+	</li>
+	<li>dedicated DEV sytems</li>
+	<li>moore tools
+	<ul>
+		<li>abaplint</li>
+		<li><span style="font-size:0.7em"><a href="https://github.com/SAP/devops-cm-client" target="_blank">https://github.com/SAP/devops-cm-client</a></span></li>
+	</ul>
+	</li>
+	<li>and more...</li>
+</ul>
+</div></div></section><section data-id="e933a31bd5e2ebe0a83e7988accc4290"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 621px;" data-block-id="2385ac1758265128789acd1395fc5997"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><a href="https://de.slideshare.net/Junsas/sap-inside-track-munich-2018-devops-and-deployment-pipelines-in-abap-landscapes" target="_blank">https://de.slideshare.net/Junsas/sap-inside-track-munich-2018-devops-and-deployment-pipelines-in-abap-landscapes</a></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 944px; height: 490px; left: 8px; top: 70px; min-width: 4px; min-height: 4px;" data-block-id="ace42ae7c1c8d0462f7d312909f78af1"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1918" data-natural-height="996" data-lazy-loaded="" data-src="deck-2-12/165a318cf81a06ed0449cb43a8346086.png"></div></div></section><section data-id="4d059549e8952834b84ffe03d923a3f7"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 655px;" data-block-id="0349b635f3dbb48d627af6c4e305e64e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><a href="https://github.com/lechnerc77/ABAP_CI_PIPELINE_BASE" target="_blank">https://github.com/lechnerc77/ABAP_CI_PIPELINE_BASE</a></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 427px; left: 0px; top: 70px; min-width: 4px; min-height: 4px;" data-block-id="0c3b2f3af5be30baa9c4c61da48fb40a"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1141" data-natural-height="508" style="" data-lazy-loaded="" data-src="deck-2-12/82f4e7b66ad6794308f3ae869b0cafc2.png"></div></div></section><section data-id="8cddd22e2943a4a07fff9950bd65cd0f"><div class="sl-block" data-block-type="image" style="width: 942px; height: 489px; left: 9px; top: 49px; min-width: 4px; min-height: 4px;" data-block-id="82906b1924f10b27f92f89b479d26714"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1916" data-natural-height="995" data-lazy-loaded="" data-src="deck-2-12/fa654f6bf6b86932fc230ccb22b1db4b.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 622px;" data-block-id="777370dad75301dd884fc55f37b25003"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><a href="https://de.slideshare.net/Junsas/sap-inside-track-munich-2018-devops-and-deployment-pipelines-in-abap-landscapes" target="_blank">https://de.slideshare.net/Junsas/sap-inside-track-munich-2018-devops-and-deployment-pipelines-in-abap-landscapes</a></p>
+</div></div></section><section data-id="1a2b3efaf7d13eb8015e8b4a50f276b1"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 160px; top: 62px;" data-block-id="31706b454900308f81dcb4be8f282f49"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>more information</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 780px; left: 80px; top: 171px;" data-block-id="686a5badf63f8ef5576a317675ab2e4b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li><a href="https://slides.com/victorionescu/reshape_abap#/" target="_blank">https://slides.com/victorionescu/reshape_abap#/</a></li>
+	<li><a href="https://de.slideshare.net/Junsas/sap-inside-track-munich-2018-devops-and-deployment-pipelines-in-abap-landscapes" target="_blank">https://de.slideshare.net/Junsas/sap-inside-track-munich-2018-devops-and-deployment-pipelines-in-abap-landscapes</a></li>
+	<li><a href="https://github.com/abapGit/sotn_2019_q2" target="_blank">https://github.com/abapGit/sotn_2019_q2</a></li>
+	<li><a href="https://docs.abapgit.org/other-articles-and-presentations.html" target="_blank">https://docs.abapgit.org/other-articles-and-presentations.html</a></li>
+</ul>
+</div></div></section><section data-id="fbdf993769b5294915034c1b8ddab9bf"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="f3da035b5272ad113d83a47e1f69cee1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Using git for Reviews</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;" data-block-id="bcd064f102fd423cc91f8e6a09d91617"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Using Github
+	<ul>
+		<li>Pull Request</li>
+		<li><a href="https://github.com/features/code-review/" target="_blank">https://github.com/features/code-review/</a></li>
+	</ul>
+	</li>
+	<li>Other Online Provider -&gt; Wording is different</li>
+	<li>SAP uses Gerrit</li>
+	<li>reviewable.io</li>
+</ul>
+</div></div></section><section data-id="a5a6f58b90fc1b61e937dff86fc7636a"><div class="sl-block" data-block-type="text" style="width: 384px; left: 48px; top: 105px; height: auto;" data-block-id="42b26a02143d22a8e80cc2e67d8e131a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>TCR</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 384px; left: 48px; top: 210px; height: auto;" data-block-id="428dcaab92df9e428930fcfb9f66b987"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 11;">
+<p>Test Commit &amp; Revert</p>
+
+<p>Newest Programming Method invented by Kent Beck</p>
+
+<p>=&gt; Needs Git + Automation</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 384px; left: 528px; top: 105px; height: auto;" data-block-id="be5f1b6b75ce6bf46b50f056dd8d238c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12;">
+<h2>&lt;DP&gt;</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 384px; left: 528px; top: 210px; height: auto;" data-block-id="6a7119fdd5ace46b2e15c808431aa71d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 13;">
+<p>Deliberate Programming</p>
+
+<p>invented by Ralf Westphal and Damir Majer. Systematic Approach to getting better Software Craftsman</p>
+
+<p>=&gt; Needs Git + Automation</p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1523089,"slug":"deck-2-12","title":"Git enabling in SAP","description":"SAP Stammtisch Luzern","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/88013e2d5afda94e869d366279479730/thumb.jpg?1559659240","view_count":1,"user":{"id":1039730,"username":"damirmajer","name":"Damir Majer","description":"","thumbnail_url":"https://lh3.googleusercontent.com/-dkJEn4zCfTM/AAAAAAAAAAI/AAAAAAAAAFg/8Y1FVuU0M0M/photo.jpg","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":3030511,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":36,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":3,"data_updated_at":1559660341681,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				maxScale: 1,
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js' },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
